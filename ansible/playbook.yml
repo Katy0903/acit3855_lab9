@@ -7,7 +7,7 @@
     - name: Clone my repo
       git:
         repo: git@github.com:Katy0903/acit3855_lab9.git
-        dest: /home/katy/demo
+        dest: /home/katy/acit3855_lab9
         version: main
         accept_hostkey: yes
         key_file: ~/.ssh/bcitkey
@@ -15,7 +15,7 @@
         
     # - name: Run Docker Compose up -d --build
     #   ansible.builtin.shell: |
-    #     cd /home/katy/demo/test
+    #     cd /home/katy/acit3855_lab9
     #     docker compose up -d --build
     #   args:
     #     executable: /bin/bash

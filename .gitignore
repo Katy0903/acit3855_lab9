@@ -1,4 +1,3 @@
-prod/
-ansible/
-test/logs/
-test/data/
+logs/
+data/
+config/prod
