@@ -8,5 +8,5 @@ datastore:
 
 events:
   hostname: kafka
-  port: 29092
+  port: 9092
   topic: events

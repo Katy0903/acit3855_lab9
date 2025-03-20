@@ -13,26 +13,31 @@
         key_file: ~/.ssh/bcitkey
         force: true
 
+    - name: Copy all files from prod to test
+      synchronize:
+        src: ../config/prod/
+        dest: /home/katy/acit3855_lab9/demo/config/test/
+        mode: push 
+        recursive: yes       
+        
+    # - name: Copy file 
+    #   copy:
+    #     src: ../config/prod/storage/app_conf.yml
+    #     dest: /home/katy/acit3855_lab9/demo/config/test/storage/app_conf.yml
+    #     owner: katy
+    #     group: katy
+    #     mode: '0644'
+    #     force: true
 
-    - name: Copy file 
-      copy:
-        src: /config/prod/storage/app_cong.yml
-        dest: /home/katy/acit3855_lab9/config/demo/test/storage/app_cong.yml
-        remote_src: yes
-        owner: katy
-        group: katy
-        mode: '0644'
-        force: true
-
-    # - name: Run Docker Compose up -d --build
-    #   ansible.builtin.shell: |
-    #     cd /home/katy/acit3855_lab9/demo
-    #     mkdir data
-    #     mkdir logs
-    #     chown -R katy:katy ./data
-    #     chown -R katy:katy ./logs
-    #     docker compose up -d --build
-    #   args:
-    #     executable: /bin/bash
+    - name: Run Docker Compose up -d --build
+      ansible.builtin.shell: |
+        cd /home/katy/acit3855_lab9/demo
+        mkdir data
+        mkdir logs
+        chown -R katy:katy ./data
+        chown -R katy:katy ./logs
+        docker compose up -d --build
+      args:
+        executable: /bin/bash
 
 
