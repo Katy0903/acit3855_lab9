@@ -11,8 +11,18 @@
         version: main
         accept_hostkey: yes
         key_file: ~/.ssh/bcitkey
+        force: true
 
-        
+
+    - name: Copy file 
+      copy:
+        src: /config/prod/
+        dest: /home/katy/acit3855_lab9/demo/test
+        remote_src: yes
+        owner: katy
+        group: katy
+        mode: '0644'
+
     - name: Run Docker Compose up -d --build
       ansible.builtin.shell: |
         cd /home/katy/acit3855_lab9/demo
@@ -25,9 +35,3 @@
         executable: /bin/bash
 
 
-    # - name: Run Docker Compose up -d --build
-    #   ansible.builtin.shell: |
-    #     cd /home/katy/acit3855_lab9/demo
-    #     docker compose up down -v
-    #   args:
-    #     executable: /bin/bash
