@@ -18,13 +18,13 @@ from pykafka.common import OffsetType
 from threading import Thread
 
 
-with open("./config/log_conf.yml", "r") as f:
+with open("./config/test/log_conf.yml", "r") as f:
     LOG_CONFIG = yaml.safe_load(f.read())
     logging.config.dictConfig(LOG_CONFIG)
 
 logger = logging.getLogger('basicLogger')
 
-with open('./config/app_conf.yml', 'r') as f:
+with open('./config/test/app_conf.yml', 'r') as f:
     app_config = yaml.safe_load(f.read())
 
 
