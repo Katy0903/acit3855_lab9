@@ -14,14 +14,15 @@
         force: true
 
 
-    # - name: Copy file 
-    #   copy:
-    #     src: /config/prod/storage/app_cong.yml
-    #     dest: /home/katy/acit3855_lab9/demo/test/storage/app_cong.yml
-    #     remote_src: yes
-    #     owner: katy
-    #     group: katy
-    #     mode: '0644'
+    - name: Copy file 
+      copy:
+        src: /config/prod/storage/app_cong.yml
+        dest: /home/katy/acit3855_lab9/config/demo/test/storage/app_cong.yml
+        remote_src: yes
+        owner: katy
+        group: katy
+        mode: '0644'
+        force: true
 
     # - name: Run Docker Compose up -d --build
     #   ansible.builtin.shell: |

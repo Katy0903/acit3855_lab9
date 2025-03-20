@@ -1,7 +1,7 @@
 version: 1
 datastore:
   user: katy
-  password: Password
+  password: <YOURPassword>
   hostname: db
   port: 3306
   db: acit3855_db
