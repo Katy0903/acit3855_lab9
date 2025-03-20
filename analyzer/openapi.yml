@@ -1,0 +1,187 @@
+openapi: 3.0.0
+info:
+  description: This API provides analyzer
+  version: "1.0.0"
+  title: Analyzer API
+
+paths:
+
+  /ccc/clientcase:
+    get:
+      summary: Get new client cases event from Kafka history
+      operationId: app.get_clientcase_event
+      description: Gets client cases at the specified index from the Kafka queue
+      parameters:
+        - name: index
+          in: query
+          description: Index of the event in the Kafka queue
+          required: true
+          schema:
+            type: integer
+            example: 2
+      responses:
+        '200':
+          description: Successfully returned a list of client case events
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/ClientCase'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /ccc/survey:
+    get:
+      summary: Get new survey event from Kafka history
+      operationId: app.get_survey_event
+      description: Gets survey at the specified index from the Kafka queue
+      parameters:
+        - name: index
+          in: query
+          description: Index of the event in the Kafka queue
+          required: true
+          schema:
+            type: integer
+            example: 2
+      responses:
+        '200':
+          description: Successfully returned a list of survey events
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Survey'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /ccc/stats:
+    get:
+      summary: Gets the event stats
+      operationId: app.get_stats
+      description: Gets statistics based on event data
+      responses:
+        '200':
+          description: Successfully returned the statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/EventStats'
+
+components:
+  schemas:
+    ClientCase:
+      title: ClientCase
+      type: object
+      required:
+        - case_id
+        - client_id
+        - timestamp
+        - conversation_time_in_min
+        - trace_id
+      properties:
+        case_id:
+          type: string
+          description: unique id for each case
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        client_id:
+          type: string
+          description: unique id for each client
+          example: d290f1ee-6c54-4b01-90e6-d701748f0853
+          format: uuid
+        timestamp:
+          type: string
+          description: time when the case was created
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+        conversation_time_in_min:
+          type: number
+          description: time spent on the conversation in minutes
+          format: float
+          example: 5
+        trace_id:
+          type: string
+          description: tracking the event from recevier
+          format: uuid
+    Survey:
+      title: Survey
+      type: object
+      required:
+        - survey_id
+        - client_id
+        - timestamp
+        - satisfaction
+        - trace_id
+      properties:
+        survey_id:
+          type: string
+          description: unique id for each survey
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0852
+        client_id:
+          type: string
+          description: unique id for each client
+          example: d290f1ee-6c54-4b01-90e6-d701748f0854
+          format: uuid
+        timestamp:
+          type: string
+          description: time when the survey was completed and submitted
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+        satisfaction:
+          type: integer
+          description: satisfaction level of the conversation
+          example: 10
+          minimum: 0
+          maximum: 10
+        trace_id:
+          type: string
+          description: tracking the event from recevier
+          format: uuid
+    EventStats:
+      type: object 
+      required:
+        - num_client_case_event
+        - num_survey_readings_event
+      properties:
+        num_client_case_event:
+          type: integer
+          example: 50
+        num_survey_readings_event:
+          type: integer
+          example: 50

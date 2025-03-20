@@ -1,0 +1,217 @@
+2025-03-04 21:22:00,737 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:22:12,015 - basicLogger - INFO - Returning clientcase event at index 3
+2025-03-04 21:22:26,157 - basicLogger - INFO - Returning clientcase event at index 10
+2025-03-04 21:22:28,533 - basicLogger - INFO - Returning clientcase event at index 11
+2025-03-04 21:22:37,094 - basicLogger - INFO - Returning clientcase event at index 10
+2025-03-04 21:24:40,123 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:24:44,096 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:24:46,680 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:27:52,985 - basicLogger - INFO - Returning clientcase event at index 5
+2025-03-04 21:28:00,242 - basicLogger - INFO - Returning clientcase event at index 10
+2025-03-04 21:28:04,934 - basicLogger - INFO - Returning clientcase event at index 11
+2025-03-04 21:28:10,282 - basicLogger - INFO - Returning clientcase event at index 20
+2025-03-04 21:28:55,722 - basicLogger - INFO - Returning clientcase event at index 25
+2025-03-04 21:29:39,221 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:31:18,497 - basicLogger - INFO - Returning survey event at index 3
+2025-03-04 21:31:24,595 - basicLogger - INFO - Returning survey event at index 26
+2025-03-04 21:33:06,513 - basicLogger - INFO - Returning survey event at index 10
+2025-03-04 21:33:10,371 - basicLogger - INFO - Returning survey event at index 25
+2025-03-04 21:33:13,393 - basicLogger - INFO - Returning survey event at index 26
+2025-03-04 21:35:34,021 - basicLogger - INFO - Returning survey event at index 26
+2025-03-04 21:35:37,505 - basicLogger - INFO - Returning survey event at index 20
+2025-03-04 21:35:41,114 - basicLogger - INFO - Returning survey event at index 27
+2025-03-04 21:37:43,554 - basicLogger - INFO - Returning survey event at index 30
+2025-03-04 21:37:46,154 - basicLogger - INFO - Returning survey event at index 37
+2025-03-04 21:37:49,096 - basicLogger - INFO - Returning survey event at index 38
+2025-03-04 21:37:51,579 - basicLogger - INFO - Returning survey event at index 39
+2025-03-04 21:38:07,395 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:40:19,629 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:40:57,477 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:41:20,777 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:41:27,284 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:42:24,461 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 0, 'num_survey_events': 0}
+2025-03-04 21:44:31,747 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:10', 'payload': {'case_id': '45148b31-60cb-467f-8dec-81f0fca03d72', 'client_id': '9e1bad0b-5fb8-4c1b-b82f-d8419f26183b', 'timestamp': '2706-01-30T23:09:26.217Z', 'conversation_time_in_min': 12, 'trace_id': '1ed5bf9f-5799-430b-afb6-0b6f2b20c5bf'}}
+2025-03-04 21:44:31,747 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,747 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:10', 'payload': {'case_id': 'fac01589-8a41-47af-bd80-e56855677247', 'client_id': 'e9c6c896-92f0-40ee-844c-d2ba614e5be4', 'timestamp': '4721-01-30T23:09:26.217Z', 'conversation_time_in_min': 20, 'trace_id': '889ac643-0a1d-453a-a136-6fb4910a1c2b'}}
+2025-03-04 21:44:31,747 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,748 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:10', 'payload': {'case_id': 'f624b022-60c1-416d-bcfd-c73474c9763b', 'client_id': '5e4b0b56-43e3-4173-9210-56596a3f7042', 'timestamp': '2641-01-30T23:09:26.217Z', 'conversation_time_in_min': 15, 'trace_id': '7cce5539-f883-4078-bd33-a64cfa85403f'}}
+2025-03-04 21:44:31,748 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,749 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:11', 'payload': {'case_id': '21991be4-302c-4228-a0c1-59946fba505e', 'client_id': 'c3877b24-06e2-4f2e-bc8b-55b1047c08ba', 'timestamp': '3427-01-30T23:09:26.217Z', 'conversation_time_in_min': 10, 'trace_id': '67e5ec67-b663-4ebf-85ab-a626dfa02884'}}
+2025-03-04 21:44:31,749 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,749 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:11', 'payload': {'case_id': '96ecb835-b60e-4022-89a5-a33f958f01ac', 'client_id': '5a6dfda1-8cea-4103-986a-890ab15a64aa', 'timestamp': '4010-01-30T23:09:26.217Z', 'conversation_time_in_min': 14, 'trace_id': '6eb103e9-2e71-464f-86de-996504882562'}}
+2025-03-04 21:44:31,751 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,751 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:15', 'payload': {'survey_id': '313452c6-a543-4a06-b890-dec149ff33b1', 'client_id': 'c43b4405-83a6-45ef-825c-cbc926784e6b', 'timestamp': '3317-12-11T23:09:26.217Z', 'satisfaction': 2, 'trace_id': '174b4bd4-24e1-431c-b8c0-292943c5c794'}}
+2025-03-04 21:44:31,751 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,752 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:15', 'payload': {'survey_id': 'ed89a817-b1de-418d-929b-77b51bc83b3e', 'client_id': 'eea56313-e9ce-4ae5-afd3-d8efb2c836b8', 'timestamp': '3745-6-17T23:09:26.217Z', 'satisfaction': 4, 'trace_id': '2bf4c04c-610a-4d3d-bf85-357b838818c7'}}
+2025-03-04 21:44:31,752 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,753 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:15', 'payload': {'survey_id': '10e33a27-2643-45f4-be0a-ad2de5e3cb91', 'client_id': 'cb541042-9160-4134-909c-ccf78910dbcd', 'timestamp': '4683-7-3T23:09:26.217Z', 'satisfaction': 0, 'trace_id': 'dea7df20-8663-46c8-9ada-4bed025ce281'}}
+2025-03-04 21:44:31,753 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,753 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:16', 'payload': {'survey_id': '60d98120-f0ad-457a-97d9-1c58e23ce697', 'client_id': '0347c28a-bd11-48f6-a4ea-a6c0ae67e15c', 'timestamp': '3828-2-16T23:09:26.217Z', 'satisfaction': 4, 'trace_id': 'b79222b4-f334-4c64-a62f-fc8669e23977'}}
+2025-03-04 21:44:31,754 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,754 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:16', 'payload': {'survey_id': '5cc39168-efb8-4981-a196-6fe4179a61d8', 'client_id': 'd61fd97d-2a7f-4d76-9d83-814556b19f99', 'timestamp': '3607-4-4T23:09:26.217Z', 'satisfaction': 0, 'trace_id': '5de12d86-40d6-4f8e-b684-833c5ad595eb'}}
+2025-03-04 21:44:31,754 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,755 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:20', 'payload': {'case_id': '90541fd4-16d9-4fd7-8115-c1197a03a3ff', 'client_id': '9947823e-c02d-4ef1-af81-f747ef8fdcc9', 'timestamp': '4403-01-30T23:09:26.217Z', 'conversation_time_in_min': 5, 'trace_id': '10b52267-25ea-483a-945c-7598b6dcfe5f'}}
+2025-03-04 21:44:31,755 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,755 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:20', 'payload': {'case_id': 'a48a02ba-cb46-472b-89cc-a7442b6cf6df', 'client_id': 'dd2aab68-91f9-47c8-b9f1-63298477564b', 'timestamp': '2997-01-30T23:09:26.217Z', 'conversation_time_in_min': 9, 'trace_id': 'e9383639-81e7-4a0d-8021-32b5cfa9d5ae'}}
+2025-03-04 21:44:31,756 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,756 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:21', 'payload': {'case_id': '7701b896-eac2-4c58-8e06-712c232b5e68', 'client_id': '8e53ab61-c89d-483d-a66a-bfd1f23052da', 'timestamp': '4123-01-30T23:09:26.217Z', 'conversation_time_in_min': 15, 'trace_id': '8964bb15-4197-4b5f-988e-7dcebbec6879'}}
+2025-03-04 21:44:31,756 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,756 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:21', 'payload': {'case_id': '12cdd872-d0e0-4a0a-a1ad-9ca0eecad883', 'client_id': '77e60834-a03c-467e-87de-c1eb44f1a7f1', 'timestamp': '3129-01-30T23:09:26.217Z', 'conversation_time_in_min': 6, 'trace_id': '039a51ee-e652-416a-93d7-32df798abf6b'}}
+2025-03-04 21:44:31,757 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,757 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:26:21', 'payload': {'case_id': 'c45132cc-3900-499b-8520-318367b7040e', 'client_id': 'd10ed9ac-2052-4847-a3de-95827d68790c', 'timestamp': '4566-01-30T23:09:26.217Z', 'conversation_time_in_min': 2, 'trace_id': '4b673f9a-32cb-4cca-a425-192bc713f490'}}
+2025-03-04 21:44:31,757 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,758 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:25', 'payload': {'survey_id': 'b00e2e43-66bb-4067-bf8c-56566a0f59f6', 'client_id': '1c3c7457-a1cd-405b-b683-2675e42181aa', 'timestamp': '3850-9-24T23:09:26.217Z', 'satisfaction': 2, 'trace_id': 'a2c5f2ca-e630-4561-8c6a-dff3e71c6d94'}}
+2025-03-04 21:44:31,758 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,758 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:25', 'payload': {'survey_id': 'dcd9adba-dbdf-4bda-8180-49636fe49266', 'client_id': '3f0cbc75-d0b6-481e-95d5-83cb399357ec', 'timestamp': '4298-7-15T23:09:26.217Z', 'satisfaction': 8, 'trace_id': '4a20710d-b726-4f37-9fac-30e0f6d15d0d'}}
+2025-03-04 21:44:31,758 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,758 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:26', 'payload': {'survey_id': 'ccbe3459-8acd-4835-8313-0cd9a1ed5c83', 'client_id': 'dbb0c1a6-8cd5-4431-80f1-85548076b7b7', 'timestamp': '2446-1-25T23:09:26.217Z', 'satisfaction': 4, 'trace_id': 'c48aeee0-3ee9-450a-b026-f40f6c993401'}}
+2025-03-04 21:44:31,759 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,759 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:26', 'payload': {'survey_id': '63ff37bb-5d94-4de1-b81f-40345bad1ac9', 'client_id': 'ccea02c9-c646-4660-ba97-46e4f19e6cfc', 'timestamp': '4550-12-27T23:09:26.217Z', 'satisfaction': 3, 'trace_id': '781606a2-4310-4b25-be5e-02b9852b5633'}}
+2025-03-04 21:44:31,759 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,759 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:26:26', 'payload': {'survey_id': 'd882f7b5-8820-433f-8ebd-bb53a56481b1', 'client_id': 'c309e1ed-d732-4a89-9d7a-4ce6f7a9725e', 'timestamp': '4990-7-3T23:09:26.217Z', 'satisfaction': 7, 'trace_id': '12e725d4-82df-4889-9b23-d4f13cb6c44a'}}
+2025-03-04 21:44:31,759 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,761 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:47', 'payload': {'case_id': 'b213b7a8-cd57-44a0-be7a-255132fe8597', 'client_id': 'b8da162a-445e-4852-ab8d-694d44d3bade', 'timestamp': '2240-01-30T23:09:26.217Z', 'conversation_time_in_min': 8, 'trace_id': '38d7f993-7ed6-4c35-aa29-8de865ae938f'}}
+2025-03-04 21:44:31,761 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,762 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:47', 'payload': {'case_id': 'd8fe0de1-5fd1-4d16-bd97-443d22976d0e', 'client_id': 'cf9c110c-1752-4aac-a1a6-54b7bd346154', 'timestamp': '4098-01-30T23:09:26.217Z', 'conversation_time_in_min': 18, 'trace_id': 'da8d37c3-7e0d-467b-bb59-e72cbf6b2fc3'}}
+2025-03-04 21:44:31,762 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,762 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:48', 'payload': {'case_id': 'af86b452-f5a3-43a1-95de-3d1ec10215d3', 'client_id': 'fc17fecc-cdbf-49db-8cb5-3d7a5865edbc', 'timestamp': '3694-01-30T23:09:26.217Z', 'conversation_time_in_min': 4, 'trace_id': '592fea2e-dd48-40b2-b4ea-6f71bdfbb0ab'}}
+2025-03-04 21:44:31,762 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,762 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:48', 'payload': {'case_id': 'a22618f1-9961-464e-965e-33a151199ad2', 'client_id': '52312385-7b7b-4edb-a465-7a7c76b0e2f8', 'timestamp': '4377-01-30T23:09:26.217Z', 'conversation_time_in_min': 3, 'trace_id': '797522d1-72f9-4e2d-9cc1-4c2e85a5de7a'}}
+2025-03-04 21:44:31,764 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,764 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:48', 'payload': {'case_id': 'afefdec1-3740-4964-ac7c-64c46334c47a', 'client_id': 'b0ccc8fa-ddf2-405e-91e9-fef0a48c6b76', 'timestamp': '4487-01-30T23:09:26.217Z', 'conversation_time_in_min': 20, 'trace_id': '7678a1e0-bca6-4b52-8060-c43600674e36'}}
+2025-03-04 21:44:31,764 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,764 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:27:52', 'payload': {'survey_id': '900d130c-6748-4a0c-8324-c27a691dba24', 'client_id': '32c81efe-421d-4b01-89f6-4883e9ece894', 'timestamp': '4752-11-18T23:09:26.217Z', 'satisfaction': 9, 'trace_id': '7c5ec94a-94f2-402d-92b1-3c65d7e49f16'}}
+2025-03-04 21:44:31,765 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,765 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:27:52', 'payload': {'survey_id': '6bf8b7bb-6278-415f-a40a-6f7091d28b38', 'client_id': '6025df62-e399-428a-b684-85c1d9727152', 'timestamp': '4814-11-10T23:09:26.217Z', 'satisfaction': 6, 'trace_id': '79751023-0e03-490e-861e-0430184430e8'}}
+2025-03-04 21:44:31,765 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,766 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:27:53', 'payload': {'survey_id': '29eba992-82c0-4bf2-b8d3-e590c165672b', 'client_id': 'ed5e31dc-f6d8-4b70-b6b0-468593932d0e', 'timestamp': '2219-3-15T23:09:26.217Z', 'satisfaction': 3, 'trace_id': 'a0a6bcdf-df11-4be6-bdfa-93fc7d49e795'}}
+2025-03-04 21:44:31,766 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,766 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:27:53', 'payload': {'survey_id': 'ca3cad7d-6e9d-4422-98fc-31a663ee3dad', 'client_id': 'b88d9109-8197-434d-9674-454bd0340815', 'timestamp': '2182-11-6T23:09:26.217Z', 'satisfaction': 5, 'trace_id': '86d90626-6348-4101-b3ca-0e319b678c38'}}
+2025-03-04 21:44:31,766 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,767 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:27:53', 'payload': {'survey_id': '70da0462-9675-40c5-b1fc-6a27679b1ce7', 'client_id': '6cadf270-4504-4435-abe1-ea18ec3dcfea', 'timestamp': '4166-3-5T23:09:26.217Z', 'satisfaction': 7, 'trace_id': 'a69effde-fcaa-42a3-b5ed-0c71b5095016'}}
+2025-03-04 21:44:31,767 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,767 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:57', 'payload': {'case_id': '1fbf40ed-17d4-44b9-90a9-b6983e0a2388', 'client_id': '15cf8ef7-e6ce-49f1-98db-362ea18047bf', 'timestamp': '3686-01-30T23:09:26.217Z', 'conversation_time_in_min': 16, 'trace_id': '99775523-fb30-4064-97f4-7cbbef0a4d12'}}
+2025-03-04 21:44:31,767 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,767 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:58', 'payload': {'case_id': '12daf568-8a5a-47ba-9ac4-d036d4c8be8a', 'client_id': 'fa25cd9b-ac0a-44f1-98f0-b450361d213f', 'timestamp': '3806-01-30T23:09:26.217Z', 'conversation_time_in_min': 7, 'trace_id': '0d629d0e-c5c4-4db6-b233-2f461bf92086'}}
+2025-03-04 21:44:31,768 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,768 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:58', 'payload': {'case_id': '9f3d173f-84be-4c35-8429-d7861fa905aa', 'client_id': '610f9bb6-d658-40b4-a0cc-fab5e83f0d80', 'timestamp': '4349-01-30T23:09:26.217Z', 'conversation_time_in_min': 11, 'trace_id': 'f51f3efa-7347-4688-be03-d28712427d4e'}}
+2025-03-04 21:44:31,768 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,769 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:58', 'payload': {'case_id': '93dc29be-4f11-4c1b-985a-af2c2e3cd143', 'client_id': 'cb57e339-a84a-40ef-aed8-cb5d535e0b6b', 'timestamp': '4532-01-30T23:09:26.217Z', 'conversation_time_in_min': 19, 'trace_id': '0fbdbc3e-dd9e-44aa-bceb-6233a2171203'}}
+2025-03-04 21:44:31,769 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,769 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 12:27:58', 'payload': {'case_id': '3232f7b9-8360-4391-aec0-f9809a6f449f', 'client_id': 'faab84c4-d09b-4b08-9a9a-2a166592e3c9', 'timestamp': '3669-01-30T23:09:26.217Z', 'conversation_time_in_min': 19, 'trace_id': '20d32061-3c76-4e07-b09a-4e5d770609d1'}}
+2025-03-04 21:44:31,769 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,770 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:28:02', 'payload': {'survey_id': 'e10571b4-a08d-4b55-8d8f-61b01d0bab9f', 'client_id': '80d2d7e4-0eea-4d2b-9885-f7e39cb25019', 'timestamp': '4577-10-24T23:09:26.217Z', 'satisfaction': 1, 'trace_id': 'e71ca898-7a71-4cbd-881b-f5042d46a8b4'}}
+2025-03-04 21:44:31,770 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,770 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:28:03', 'payload': {'survey_id': '46e6505c-fb33-4acf-85f9-359acf8c3585', 'client_id': 'b69cd90e-cee9-4178-b82c-40caa6a21e30', 'timestamp': '4663-8-7T23:09:26.217Z', 'satisfaction': 10, 'trace_id': 'e2ec20e3-0872-4e4a-b073-2f5a376a4962'}}
+2025-03-04 21:44:31,770 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,770 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:28:03', 'payload': {'survey_id': '084f7a27-9ee0-4f83-bdaf-8dc5df282941', 'client_id': '58045857-67cf-4d59-b7f5-48a96790a232', 'timestamp': '3396-2-21T23:09:26.217Z', 'satisfaction': 5, 'trace_id': '10afd42a-e23f-4cb4-b9a6-0debd8b255f5'}}
+2025-03-04 21:44:31,771 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,771 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:28:03', 'payload': {'survey_id': '2927069e-7e81-4ed6-8253-b94da5d9255d', 'client_id': '5485f79c-36bd-437e-98ae-e007a03ab182', 'timestamp': '3055-12-4T23:09:26.217Z', 'satisfaction': 2, 'trace_id': '073e5f81-6bc9-4628-8dda-87798b3d53b2'}}
+2025-03-04 21:44:31,771 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,771 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 12:28:03', 'payload': {'survey_id': '1981c26a-6478-4538-a33c-2ff4449d521c', 'client_id': '31e2fd5a-45b4-4e28-a2b2-ff08c7a07c67', 'timestamp': '4506-5-2T23:09:26.217Z', 'satisfaction': 6, 'trace_id': 'aa86c080-ddfb-4935-a364-1918e94445f4'}}
+2025-03-04 21:44:31,772 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,772 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:04', 'payload': {'case_id': '88ab07c4-db69-4ff0-a6ea-7d8767911f0f', 'client_id': '7e6cc468-3749-4bd7-aae4-b468469a1d59', 'timestamp': '4091-01-30T23:09:26.217Z', 'conversation_time_in_min': 11, 'trace_id': 'eb355ac5-50df-45f5-b74b-26fc7d913ad0'}}
+2025-03-04 21:44:31,772 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,773 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:04', 'payload': {'case_id': '20984dd7-1efd-49e9-9d37-2c776f8d6c5f', 'client_id': 'e042a715-9908-4d1c-a431-726ed0eaafa3', 'timestamp': '2397-01-30T23:09:26.217Z', 'conversation_time_in_min': 12, 'trace_id': 'eff7ac11-9d87-4806-b5ba-a9f7d0d0edbe'}}
+2025-03-04 21:44:31,773 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,773 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:04', 'payload': {'case_id': '93d29591-6c22-4846-aa3b-f3c20c3a307e', 'client_id': 'b34fab4f-d327-4aad-b591-edbbaeebef1a', 'timestamp': '4820-01-30T23:09:26.217Z', 'conversation_time_in_min': 15, 'trace_id': '9a9b3512-ef6c-4590-93be-fd8a28bf686e'}}
+2025-03-04 21:44:31,774 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,774 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:04', 'payload': {'case_id': '8ca755b2-c813-4b4a-ada3-40224814208e', 'client_id': '9c9ed1c0-c7c8-49d4-89b5-47c7d42f44b3', 'timestamp': '3391-01-30T23:09:26.217Z', 'conversation_time_in_min': 12, 'trace_id': '79f83d24-460e-455a-8dea-f26c4385af5d'}}
+2025-03-04 21:44:31,775 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,775 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:04', 'payload': {'case_id': 'f776ac3c-2cdf-453a-8a28-ff11b460c1fd', 'client_id': 'bfcc24b0-86f4-42a8-8672-d5117d51a32e', 'timestamp': '4230-01-30T23:09:26.217Z', 'conversation_time_in_min': 3, 'trace_id': '6a2d89fd-1f75-4532-a594-87d534a71036'}}
+2025-03-04 21:44:31,775 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,775 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:09', 'payload': {'survey_id': '39965c7b-d668-49c8-ba68-b91a2000b331', 'client_id': '68d54c24-7c1a-43e2-b289-a81c04bca5f5', 'timestamp': '3834-7-14T23:09:26.217Z', 'satisfaction': 0, 'trace_id': 'c5a10960-943c-4e48-a2c9-aaacf2a03f22'}}
+2025-03-04 21:44:31,776 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,776 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:09', 'payload': {'survey_id': '5aa1cd03-52e8-40f0-a7ef-22320587baa0', 'client_id': '9e9b2594-af49-45f2-9d09-c9f76573f2c8', 'timestamp': '4130-6-8T23:09:26.217Z', 'satisfaction': 3, 'trace_id': '4e5a241d-6f89-4e59-83f2-9761104f1b2b'}}
+2025-03-04 21:44:31,776 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,776 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:09', 'payload': {'survey_id': '9f461c91-d425-405e-8c03-a24957c699cb', 'client_id': '14bcc213-cc16-492b-b7a3-01a0fee132b0', 'timestamp': '2024-7-7T23:09:26.217Z', 'satisfaction': 7, 'trace_id': '41ebf696-9209-480f-b03c-eb3dce0a9352'}}
+2025-03-04 21:44:31,777 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,777 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:09', 'payload': {'survey_id': '8844780e-a6ef-4a96-9b8f-066722bf0b7c', 'client_id': 'eb3b78e4-9d3b-4d6c-a963-26541c719c9a', 'timestamp': '3264-4-12T23:09:26.217Z', 'satisfaction': 10, 'trace_id': '4945386c-c454-47f0-8359-dd29d38de285'}}
+2025-03-04 21:44:31,777 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,778 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:09', 'payload': {'survey_id': '3d3baa01-2dbf-43e7-93ed-46c2374b5143', 'client_id': '7f321edf-e5d2-4661-bf4c-dd9d89f9dcf3', 'timestamp': '3025-3-23T23:09:26.217Z', 'satisfaction': 0, 'trace_id': 'a311d230-3135-4d8c-97aa-e3ec24e9a6e7'}}
+2025-03-04 21:44:31,778 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,780 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:14', 'payload': {'case_id': '1ff76315-6c16-44d4-b889-9c7f09c2487b', 'client_id': 'a0c6770e-537c-4422-9580-009322d21c48', 'timestamp': '3140-01-30T23:09:26.217Z', 'conversation_time_in_min': 4, 'trace_id': 'a81642a0-bed7-456d-bf0b-19fb27d9e7a4'}}
+2025-03-04 21:44:31,780 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,781 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:14', 'payload': {'case_id': '8eb2759d-bfaa-414a-a500-4dbdbf0818c9', 'client_id': 'eb49fcec-81bf-4b3c-988e-b6bb17889804', 'timestamp': '4350-01-30T23:09:26.217Z', 'conversation_time_in_min': 2, 'trace_id': '9d4e72f9-fe88-4e89-aed8-e7f7c5924052'}}
+2025-03-04 21:44:31,781 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,781 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:15', 'payload': {'case_id': '47ffe7ea-f421-4c03-aef1-e94e67e56a42', 'client_id': 'bfac26fa-e315-4ea6-97c4-1c862a552a48', 'timestamp': '3434-01-30T23:09:26.217Z', 'conversation_time_in_min': 19, 'trace_id': 'cf6e4799-2da1-4916-b20a-d37d7f18e1cc'}}
+2025-03-04 21:44:31,781 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,781 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:15', 'payload': {'case_id': 'aab1b116-d5c7-4832-aaf6-178a5677ce8c', 'client_id': '597531b5-2c76-4184-9b86-19cd80523c85', 'timestamp': '4875-01-30T23:09:26.217Z', 'conversation_time_in_min': 13, 'trace_id': '04f97db4-f2b6-4f0b-afe1-0c3e6c0613f5'}}
+2025-03-04 21:44:31,782 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,782 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:24:15', 'payload': {'case_id': '27c6a0ff-47b5-4c43-a78b-ae295a7c6fec', 'client_id': '7e80c126-0278-48ba-8c20-45efad69ce73', 'timestamp': '2968-01-30T23:09:26.217Z', 'conversation_time_in_min': 4, 'trace_id': '989b03ff-9353-44fc-9afd-61f7ad56f513'}}
+2025-03-04 21:44:31,782 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,782 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:20', 'payload': {'survey_id': '70888b8f-d6b8-42a4-bf58-014c98a4c4ca', 'client_id': '32f352bd-15f6-4b56-a506-fde602eb0b2e', 'timestamp': '2192-4-3T23:09:26.217Z', 'satisfaction': 2, 'trace_id': '259c807f-2802-4e30-9be1-d930e6765eed'}}
+2025-03-04 21:44:31,783 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,783 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:20', 'payload': {'survey_id': '1beb8534-227e-4548-8e15-f0649b7dfcc7', 'client_id': '1db458f0-9197-481c-b616-65cadca69447', 'timestamp': '3364-4-18T23:09:26.217Z', 'satisfaction': 6, 'trace_id': '040ba127-fb3a-4dfd-b29a-fc25bb7533db'}}
+2025-03-04 21:44:31,783 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,784 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:20', 'payload': {'survey_id': '14ecaa3f-ba8e-412e-ab1d-986647e0b0c2', 'client_id': '93dabad1-88f8-45b3-a5fa-f17f54aea614', 'timestamp': '2263-12-22T23:09:26.217Z', 'satisfaction': 7, 'trace_id': '9259b74c-2962-4b75-ab01-e0553c8052e5'}}
+2025-03-04 21:44:31,784 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,784 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:20', 'payload': {'survey_id': 'ea3dc17e-2d69-41e7-8534-ce275008d138', 'client_id': 'e5acc0ca-ca4f-4168-b5d0-87f3ce87a817', 'timestamp': '2442-3-26T23:09:26.217Z', 'satisfaction': 6, 'trace_id': '94da5164-806b-4471-8633-f239fe0935f4'}}
+2025-03-04 21:44:31,784 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,784 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:24:20', 'payload': {'survey_id': 'e0b5de10-594b-4e4b-9d9b-1b7c65659389', 'client_id': '2ac7f97a-feed-4620-bb4a-a132f691ae0d', 'timestamp': '2359-9-4T23:09:26.217Z', 'satisfaction': 0, 'trace_id': '6c32c429-c0f5-4d93-ba86-8167fa2f9873'}}
+2025-03-04 21:44:31,786 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,786 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:42', 'payload': {'case_id': 'e4578d4c-3274-4060-a5dc-5c8165088c04', 'client_id': 'ab1ca713-1f66-4a95-b4d9-d81913e37681', 'timestamp': '2281-01-30T23:09:26.217Z', 'conversation_time_in_min': 3, 'trace_id': '4177c998-4ae8-4f62-a54e-7abe38d0c171'}}
+2025-03-04 21:44:31,786 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,786 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:43', 'payload': {'case_id': '98945a18-882d-40ca-91cf-60453f3771f7', 'client_id': '6824e4ad-74e0-48b7-bd92-a33c10889835', 'timestamp': '3508-01-30T23:09:26.217Z', 'conversation_time_in_min': 4, 'trace_id': '7ad3a269-265c-4f70-aede-891e3f3aed28'}}
+2025-03-04 21:44:31,787 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,787 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:43', 'payload': {'case_id': '30c82596-5424-4c26-bc62-7615ec223aa0', 'client_id': '16c8b498-ce93-4383-8d7f-0b40a5325a5d', 'timestamp': '3530-01-30T23:09:26.217Z', 'conversation_time_in_min': 9, 'trace_id': '2b4d526d-add4-4d01-ac50-d7ee6f6b2fe8'}}
+2025-03-04 21:44:31,787 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,787 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:43', 'payload': {'case_id': 'b1ee329f-61fe-47cb-bfb3-e49b59901c49', 'client_id': '5066e4db-4254-46a2-8bab-60f24a5014eb', 'timestamp': '2971-01-30T23:09:26.217Z', 'conversation_time_in_min': 19, 'trace_id': '8293242c-de18-43d3-987d-125b0eeb421e'}}
+2025-03-04 21:44:31,787 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,788 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:43', 'payload': {'case_id': '6af6e8b0-1e43-47bc-9354-8ef5eb0b37c6', 'client_id': '5285aff5-313c-4b90-bf1a-4b6d129e7aaf', 'timestamp': '3178-01-30T23:09:26.217Z', 'conversation_time_in_min': 18, 'trace_id': 'ef926352-804a-41e4-b133-4019b1dad14e'}}
+2025-03-04 21:44:31,788 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,788 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:47', 'payload': {'survey_id': 'c1eeee50-e245-481c-857c-faafed1649ed', 'client_id': 'e0a22630-7d33-4ef4-bb13-f000c91c1d29', 'timestamp': '4308-2-17T23:09:26.217Z', 'satisfaction': 4, 'trace_id': '68c1f8e0-5ae0-46b8-8940-32b297e7c599'}}
+2025-03-04 21:44:31,789 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,789 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:48', 'payload': {'survey_id': '6125bf06-a016-4cc4-a107-39f65ab6fa75', 'client_id': '6db99d13-e132-43a4-9901-58181f63876e', 'timestamp': '4955-5-19T23:09:26.217Z', 'satisfaction': 3, 'trace_id': '9c63c6f5-64d6-435c-ac64-703e270ade32'}}
+2025-03-04 21:44:31,789 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,789 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:48', 'payload': {'survey_id': '4bc8e22c-11a5-4a62-9780-39d0ea32bbed', 'client_id': 'd5d6c746-6a44-483b-9877-8001109072e7', 'timestamp': '4678-4-15T23:09:26.217Z', 'satisfaction': 8, 'trace_id': '98c7d4d1-f239-420a-9b90-88ce1c4cdaaa'}}
+2025-03-04 21:44:31,790 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,790 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:48', 'payload': {'survey_id': 'ba6e795d-2866-4f0e-a6d9-2716f8e9864a', 'client_id': '0693bb2a-1a01-4b02-adbd-19301648ac8e', 'timestamp': '2593-4-14T23:09:26.217Z', 'satisfaction': 7, 'trace_id': 'bb2f5cfa-928f-4edb-806c-0b3ca1d64e8d'}}
+2025-03-04 21:44:31,791 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,791 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:48', 'payload': {'survey_id': 'e1dc8de1-eb05-4424-96f0-06ac1dc40330', 'client_id': 'c341247b-226e-4e3a-a526-7ca0d3d92e09', 'timestamp': '3781-9-15T23:09:26.217Z', 'satisfaction': 3, 'trace_id': '8c33c47c-0217-430b-a489-ff0838b272ae'}}
+2025-03-04 21:44:31,791 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,791 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:52', 'payload': {'case_id': '21816a69-4ee8-4b73-a915-abc3d987700a', 'client_id': '684151b7-c6ec-45e4-b6ce-e643761b336f', 'timestamp': '4604-01-30T23:09:26.217Z', 'conversation_time_in_min': 1, 'trace_id': '5f0edba0-8826-4a08-9ea5-f2f7b373e62f'}}
+2025-03-04 21:44:31,791 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,792 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:53', 'payload': {'case_id': '6d21d810-cdad-4733-98f9-42df9ae26077', 'client_id': '91753e7f-6452-4905-af19-e62e6d7d9114', 'timestamp': '4523-01-30T23:09:26.217Z', 'conversation_time_in_min': 20, 'trace_id': '3a4407e4-d464-4f5a-8efd-55deaa362ff3'}}
+2025-03-04 21:44:31,792 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,792 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:53', 'payload': {'case_id': 'cb575ec3-43f9-4827-97b9-d60d62c33d38', 'client_id': '3fc03b48-817b-4448-811e-b96344c95209', 'timestamp': '4204-01-30T23:09:26.217Z', 'conversation_time_in_min': 1, 'trace_id': '1c244b36-3af9-4691-b774-bf8766ffb2d9'}}
+2025-03-04 21:44:31,792 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,792 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:53', 'payload': {'case_id': '2545708f-6712-4a91-bbb2-5e428614b736', 'client_id': 'd1a1d577-2b7d-42ca-bbd6-5b3121e759db', 'timestamp': '4934-01-30T23:09:26.217Z', 'conversation_time_in_min': 9, 'trace_id': '6e6d99a4-84d8-4579-8997-7fb4ed982fc4'}}
+2025-03-04 21:44:31,792 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,793 - basicLogger - INFO - Consumed message: {'type': 'clientcase', 'datetime': '2025-03-04 21:36:53', 'payload': {'case_id': 'd4d6bffe-a79b-410e-8653-e4c2b213d65b', 'client_id': '5a4f530d-0a0d-46c8-9d03-0982ab06e899', 'timestamp': '2628-01-30T23:09:26.217Z', 'conversation_time_in_min': 1, 'trace_id': '855eaf61-f388-4dbe-b2c1-230d96cf3602'}}
+2025-03-04 21:44:31,793 - basicLogger - INFO - Event type: clientcase
+2025-03-04 21:44:31,794 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:58', 'payload': {'survey_id': 'fc5cff7f-a80f-47a9-875a-3be732cbd30f', 'client_id': '907857fb-ab4f-484b-a175-83d3ea85e950', 'timestamp': '4009-10-5T23:09:26.217Z', 'satisfaction': 0, 'trace_id': '65dbe934-242e-4296-955b-ebfe99186789'}}
+2025-03-04 21:44:31,794 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,794 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:58', 'payload': {'survey_id': '582666c0-a3dc-499a-9ef4-1e078c6eda73', 'client_id': 'a4397550-8bd0-4e8c-a524-0cbaf72bf5fc', 'timestamp': '2019-6-9T23:09:26.217Z', 'satisfaction': 3, 'trace_id': '19b3539d-f44d-4e28-8eb6-7f630af27a93'}}
+2025-03-04 21:44:31,795 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,795 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:58', 'payload': {'survey_id': 'bfd434f3-3f28-40f5-a08a-613f4b051620', 'client_id': 'df66e3b7-b5a3-4da1-8db7-97be9aaccd74', 'timestamp': '2691-5-4T23:09:26.217Z', 'satisfaction': 6, 'trace_id': '264b9e75-8238-412d-8096-b5b3a738d82b'}}
+2025-03-04 21:44:31,795 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,796 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:58', 'payload': {'survey_id': '5aad48d6-2c38-4af5-a252-8a84854c46c2', 'client_id': '9f17c1d1-2122-41dd-8ebc-937f003b8a6a', 'timestamp': '2344-11-18T23:09:26.217Z', 'satisfaction': 8, 'trace_id': '74767be6-4b70-4774-971d-efa987588955'}}
+2025-03-04 21:44:31,796 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:31,796 - basicLogger - INFO - Consumed message: {'type': 'survey', 'datetime': '2025-03-04 21:36:58', 'payload': {'survey_id': 'c902fef9-ef42-4d3b-9d27-291f1fb20d3d', 'client_id': '2865f670-ee7f-4777-9078-0e0808738dd1', 'timestamp': '3573-8-20T23:09:26.217Z', 'satisfaction': 2, 'trace_id': '2c9d8829-a8f5-47f8-a1c9-0165e9d64498'}}
+2025-03-04 21:44:31,796 - basicLogger - INFO - Event type: survey
+2025-03-04 21:44:32,803 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 40, 'num_survey_events': 40}
+2025-03-04 21:45:19,101 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 40, 'num_survey_events': 40}
+2025-03-04 21:45:22,076 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 40, 'num_survey_events': 40}
+2025-03-04 21:45:41,857 - basicLogger - INFO - Returning clientcase event at index 0
+2025-03-04 21:46:33,686 - basicLogger - INFO - Returning clientcase event at index 49
+2025-03-04 21:46:39,613 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 50, 'num_survey_events': 50}
+2025-03-06 12:59:39,114 - basicLogger - INFO - Returning survey event at index 3
+2025-03-06 12:59:46,702 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 10, 'num_survey_events': 10}
+2025-03-06 12:59:49,569 - basicLogger - INFO - Returning clientcase event at index 3
+2025-03-06 13:00:04,155 - basicLogger - INFO - Returning clientcase event at index 9
+2025-03-06 13:00:08,153 - basicLogger - INFO - Returning survey event at index 9
+2025-03-06 13:00:12,513 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 10, 'num_survey_events': 10}
+2025-03-06 13:25:23,137 - basicLogger - INFO - Returning clientcase event at index 9
+2025-03-06 13:25:27,575 - basicLogger - INFO - Returning survey event at index 9
+2025-03-06 13:25:31,903 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 10, 'num_survey_events': 10}
+2025-03-06 13:26:13,950 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 20, 'num_survey_events': 20}
+2025-03-06 13:26:18,276 - basicLogger - INFO - Returning survey event at index 19
+2025-03-06 14:13:52,962 - basicLogger - INFO - Returning clientcase event at index 18
+2025-03-06 14:13:57,632 - basicLogger - INFO - Returning clientcase event at index 17
+2025-03-06 14:29:25,159 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 20, 'num_survey_events': 20}
+2025-03-06 14:29:42,899 - basicLogger - INFO - Returning survey event at index 19
+2025-03-06 14:29:47,430 - basicLogger - INFO - Returning clientcase event at index 19
+2025-03-06 14:30:33,243 - basicLogger - INFO - Returning event stats: {'num_clientcase_events': 30, 'num_survey_events': 30}
+2025-03-06 14:30:38,117 - basicLogger - INFO - Returning survey event at index 20
+2025-03-06 14:30:42,021 - basicLogger - INFO - Returning clientcase event at index 20

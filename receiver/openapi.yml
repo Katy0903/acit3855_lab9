@@ -1,0 +1,103 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: ClientCareCenter
+  description: It is for a global client care center of a large organization that helps the management team analyze the performance from customer service cases and the survey.
+paths:
+  /ccc/clientcase:
+    post:
+      summary: client case report
+      tags: []
+      responses:
+        '201':
+          description: Case created
+        '400':
+          description: Something invalid
+      operationId: app.post_clientcase
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClientCase'
+        description: client case report to add
+      description: add a new client case report
+    parameters: []
+  /ccc/survey:
+    post:
+      summary: survey report
+      tags: []
+      responses:
+        '201':
+          description: survey created
+        '400':
+          description: Something invalid
+      operationId: app.post_survey
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Survey'
+        description: survey case report to add
+      description: add a new survey report
+    parameters: []
+components:
+  schemas:
+    ClientCase:
+      title: ClientCase
+      type: object
+      required:
+        - case_id
+        - client_id
+        - timestamp
+        - conversation_time_in_min
+      properties:
+        case_id:
+          type: string
+          description: unique id for each case
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        client_id:
+          type: string
+          description: unique id for each client
+          example: d290f1ee-6c54-4b01-90e6-d701748f0853
+          format: uuid
+        timestamp:
+          type: string
+          description: time when the case was created
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+        conversation_time_in_min:
+          type: number
+          description: time spent on the conversation in minutes
+          format: float
+          example: 5
+    Survey:
+      title: Survey
+      type: object
+      required:
+        - survey_id
+        - client_id
+        - timestamp
+        - satisfaction
+      properties:
+        survey_id:
+          type: string
+          description: unique id for each survey
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0852
+        client_id:
+          type: string
+          description: unique id for each client
+          example: d290f1ee-6c54-4b01-90e6-d701748f0854
+          format: uuid
+        timestamp:
+          type: string
+          description: time when the survey was completed and submitted
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+        satisfaction:
+          type: integer
+          description: satisfaction level of the conversation
+          example: 10
+          minimum: 0
+          maximum: 10

@@ -1,0 +1,13 @@
+version: 1
+
+# events:
+#   clientcase:
+#     url: http://storage:8090/ccc/clientcase
+
+#   survey:
+#     url: http://storage:8090/ccc/survey
+
+events:
+  hostname: kafka
+  port: 29092
+  topic: events

@@ -1,0 +1,12 @@
+version: 1
+datastore:
+  user: katy
+  password: Password
+  hostname: db
+  port: 3306
+  db: acit3855_db
+
+events:
+  hostname: kafka
+  port: 29092
+  topic: events

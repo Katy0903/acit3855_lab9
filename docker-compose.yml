@@ -1,0 +1,131 @@
+
+services:
+
+  zookeeper:
+    image: wurstmeister/zookeeper
+    networks:
+      - mynetwork
+    volumes:
+      - zookeeper-data:/var/lib/zookeeper/data
+  kafka:
+    image: wurstmeister/kafka
+    command: >
+      sh -c "rm -f /kafka/*/meta.properties && start-kafka.sh"
+    # ports:
+      # - "9092:9092"
+    hostname: kafka
+    environment:
+      KAFKA_CREATE_TOPICS: "events:1:1" 
+      KAFKA_ADVERTISED_HOST_NAME: kafka 
+      KAFKA_LISTENERS: INSIDE://:29092,OUTSIDE://0.0.0.0:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:29092,OUTSIDE://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/kafka:/kafka
+    depends_on:
+      - "zookeeper"
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "9092"]
+      interval: 5s
+      retries: 50
+      start_period: 1s
+      timeout: 1s
+    networks:
+      - mynetwork
+
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_USER: katy
+      MYSQL_PASSWORD: Password
+      MYSQL_DATABASE: acit3855_db
+    # ports:
+    #   - 3307:3306
+    volumes:
+      - ./data/database:/var/lib/mysql 
+    networks:
+      - mynetwork
+  
+    healthcheck:
+      test: ["CMD", "mysql", "-u", "katy", "-pPassword", "-e", "SHOW DATABASES;"]
+      interval: 5s
+      retries: 50
+      start_period: 1s
+      timeout: 1s
+
+
+  receiver:
+    build:
+      context: ./receiver
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"  
+    volumes:
+      - ./config/receiver:/app/config
+      - ./logs:/app/logs
+    depends_on:
+      - kafka  
+    networks:
+      - mynetwork
+  storage:
+    build:
+      context: ./storage
+      dockerfile: Dockerfile
+    # ports:
+      # - "8090:8090"  
+    volumes:
+      - ./config/storage:/app/config
+      - ./logs:/app/logs
+    networks:
+      - mynetwork
+    depends_on:
+      db:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+
+
+
+  processing:
+    build:
+      context: ./processing
+      dockerfile: Dockerfile
+    ports:
+      - "8100:8100" 
+    volumes:
+      - ./config/processing:/app/config
+      - ./logs:/app/logs
+      - ./data/processing:/app/data 
+    networks:
+      - mynetwork
+    depends_on:
+      - storage  
+
+
+  analyzer:
+    build:
+      context: ./analyzer
+      dockerfile: Dockerfile
+    ports:
+      - "8110:8110"  
+    volumes:
+      - ./config/analyzer:/app/config
+      - ./logs:/app/logs
+    depends_on:
+      kafka:
+        condition: service_healthy
+
+    networks:
+      - mynetwork
+
+volumes:
+  zookeeper-data: 
+networks:
+  mynetwork:
+    driver: bridge

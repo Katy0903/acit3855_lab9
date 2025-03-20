@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  description: This API provides event stats
+  version: "1.0.0"
+  title: Stats API
+
+paths:
+  /ccc/stats:
+    get:
+      summary: Gets the event stats
+      operationId: app.get_stats
+      description: Gets statistics based on event data
+      responses:
+        '200':
+          description: Successfully returned the statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/ReadingStats'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+components:
+  schemas:
+    ReadingStats:
+      type: object 
+      required:
+        - num_client_case_readings
+        - max_conversation_time
+        - num_survey_readings
+        - max_survey_satisfaction
+        - last_updated
+      properties:
+        num_client_case_readings:
+          type: integer
+          example: 500000
+        max_conversation_time:
+          type: number
+          format: float
+          example: 120.5  
+        num_survey_readings:
+          type: integer
+          example: 500000
+        max_survey_satisfaction:
+          type: integer
+          example: 10
+        last_updated:
+          type: string
+          example: '2025-02-13 22:19:42'
