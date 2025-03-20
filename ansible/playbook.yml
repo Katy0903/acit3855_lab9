@@ -14,24 +14,24 @@
         force: true
 
 
-    - name: Copy file 
-      copy:
-        src: /config/prod/
-        dest: /home/katy/acit3855_lab9/demo/test
-        remote_src: yes
-        owner: katy
-        group: katy
-        mode: '0644'
+    # - name: Copy file 
+    #   copy:
+    #     src: /config/prod/storage/app_cong.yml
+    #     dest: /home/katy/acit3855_lab9/demo/test/storage/app_cong.yml
+    #     remote_src: yes
+    #     owner: katy
+    #     group: katy
+    #     mode: '0644'
 
-    - name: Run Docker Compose up -d --build
-      ansible.builtin.shell: |
-        cd /home/katy/acit3855_lab9/demo
-        mkdir data
-        mkdir logs
-        chown -R katy:katy ./data
-        chown -R katy:katy ./logs
-        docker compose up -d --build
-      args:
-        executable: /bin/bash
+    # - name: Run Docker Compose up -d --build
+    #   ansible.builtin.shell: |
+    #     cd /home/katy/acit3855_lab9/demo
+    #     mkdir data
+    #     mkdir logs
+    #     chown -R katy:katy ./data
+    #     chown -R katy:katy ./logs
+    #     docker compose up -d --build
+    #   args:
+    #     executable: /bin/bash
 
 
