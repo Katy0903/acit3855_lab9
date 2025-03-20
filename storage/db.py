@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 import yaml
 
 
-with open('./config/test/app_conf.yml', 'r') as f:
+with open('./config/app_conf.yml', 'r') as f:
     app_config = yaml.safe_load(f.read())
 
 
