@@ -14,13 +14,12 @@ RUN pip3 install -r requirements.txt
 COPY . /app
 # Change permissions and become a non-privileged user
 RUN useradd -m katy
-# Ensure log directory exists and has the right permissions
-RUN mkdir -p /app/logs && chown -R katy:katy /app/logs
+
 
 RUN chown -R katy:katy /app
 USER katy
 # Tells on which port the service listens in the container
-EXPOSE 8100
+EXPOSE 8110
 # Entrypoint = run Python
 ENTRYPOINT [ "python3" ]
 # Default = run app.py
