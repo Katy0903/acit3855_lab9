@@ -3,8 +3,8 @@
 const PROCESSING_STATS_API_URL = "http://acit3855lab9.eastus.cloudapp.azure.com:8100/ccc/stats"
 const ANALYZER_API_URL = {
     stats: "http://acit3855lab9.eastus.cloudapp.azure.com:8110/ccc/stats",
-    clientcase: "http://acit3855lab9.eastus.cloudapp.azure.com:8110/ccc/clientcase",
-    survey: "http://acit3855lab9.eastus.cloudapp.azure.com:8110/ccc/survey"
+    clientcase: "http://acit3855lab9.eastus.cloudapp.azure.com:8110/ccc/clientcase?index=1",
+    survey: "http://acit3855lab9.eastus.cloudapp.azure.com:8110/ccc/survey?index=1"
 }
 
 // This function fetches and updates the general statistics
