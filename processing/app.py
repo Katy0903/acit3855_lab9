@@ -1,5 +1,8 @@
 import connexion
 from connexion import NoContent
+from connexion import FlaskApp
+from connexion.middleware import MiddlewarePosition
+from starlette.middleware.cors import CORSMiddleware
 import json
 import os
 from datetime import datetime
@@ -133,7 +136,21 @@ def init_scheduler():
     sched.add_job(populate_stats, 'interval', seconds=app_config['scheduler']['interval'])
     sched.start()
 
-app = connexion.FlaskApp(__name__, specification_dir='')
+
+# app = connexion.FlaskApp(__name__, specification_dir='')
+
+app = FlaskApp(__name__)
+
+
+app.add_middleware(
+    CORSMiddleware,
+    position=MiddlewarePosition.BEFORE_EXCEPTION,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.add_api("openapi.yml", strict_validation=True, validate_responses=True)
 
 

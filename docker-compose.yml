@@ -124,6 +124,21 @@ services:
     networks:
       - mynetwork
 
+  nginx:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./dashboard:/usr/share/nginx/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - processing
+      - analyzer
+    networks:
+      - mynetwork
+
 volumes:
   zookeeper-data: 
 networks:
