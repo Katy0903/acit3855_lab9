@@ -4,7 +4,7 @@
   become: no  
   tasks:
   
-    - name: Clone my repo
+    - name: Clone my repoo
       git:
         repo: git@github.com:Katy0903/acit3855_lab9.git
         dest: /home/katy/acit3855_lab9/demo
