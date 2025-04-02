@@ -5,7 +5,7 @@ scheduler:
   interval: 5
 eventstores:
   clientcase:
-    url: http://storage:8090/ccc/clientcase
+    url: http://storage:8090/storage/ccc/clientcase
   survey:
-    url: http://storage:8090/ccc/survey
+    url: http://storage:8090/storage/ccc/survey
 
