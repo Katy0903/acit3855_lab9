@@ -65,7 +65,7 @@ services:
       context: ./receiver
       dockerfile: Dockerfile
     environment:
-    #   CORS_ALLOW_ALL: "no"
+      CORS_ALLOW_ALL: "no"
     # ports:
     #   - "8080:8080"  
     volumes:
@@ -77,7 +77,7 @@ services:
       - mynetwork
     deploy:
       replicas: 3
-      
+
   storage:
     build:
       context: ./storage
