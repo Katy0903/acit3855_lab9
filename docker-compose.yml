@@ -65,9 +65,9 @@ services:
       context: ./receiver
       dockerfile: Dockerfile
     environment:
-      CORS_ALLOW_ALL: "no"
-    ports:
-      - "8080:8080"  
+    #   CORS_ALLOW_ALL: "no"
+    # ports:
+    #   - "8080:8080"  
     volumes:
       - ./config/test/receiver:/app/config
       - ./logs:/app/logs
@@ -75,6 +75,9 @@ services:
       - kafka  
     networks:
       - mynetwork
+    deploy:
+      replicas: 3
+      
   storage:
     build:
       context: ./storage
@@ -102,8 +105,8 @@ services:
       dockerfile: Dockerfile
     environment:
       CORS_ALLOW_ALL: "no"
-    ports:
-      - "8100:8100" 
+    # ports:
+    #   - "8100:8100" 
     volumes:
       - ./config/test/processing:/app/config
       - ./logs:/app/logs
@@ -120,8 +123,8 @@ services:
       dockerfile: Dockerfile
     environment:
       CORS_ALLOW_ALL: "no"
-    ports:
-      - "8110:8110"  
+    # ports:
+    #   - "8110:8110"  
     volumes:
       - ./config/test/analyzer:/app/config
       - ./logs:/app/logs
