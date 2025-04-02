@@ -32,8 +32,6 @@
     - name: Run Docker Compose up -d --build
       ansible.builtin.shell: |
         cd /home/katy/acit3855_lab9/demo
-        mkdir data
-        mkdir logs
         chown -R katy:katy ./data
         chown -R katy:katy ./logs
         docker compose up -d --build

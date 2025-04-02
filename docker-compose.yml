@@ -75,8 +75,8 @@ services:
       - kafka  
     networks:
       - mynetwork
-    deploy:
-      replicas: 3
+    # deploy:
+    #   replicas: 3
 
   storage:
     build:
