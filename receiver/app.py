@@ -8,8 +8,9 @@ import yaml
 import logging
 import logging.config
 import uuid
-from pykafka import KafkaClient
-
+from pykafka import KafkaClient, KafkaException
+import random
+import time
 
 # STORAGE_SERVICE_URL = "http://localhost:8090"
 
@@ -29,30 +30,69 @@ kafka_port = kafka_config['port']
 kafka_topic = kafka_config['topic']
 
 
-# def send_to_storage_service(event_type, data):
-#     try:
-
-#         logger.info(f"Received event {event_type} with a trace id of {data.get('trace_id')}")
-
-#         storage_url = app_config['events'][event_type]['url']
-        
-#         data["trace_id"] = str(uuid.uuid4())
-
-#         response = httpx.post(storage_url, json=data)
-
-#         logger.info(f"Response for event {event_type} (id: {data.get('trace_id')}) has status {response.status_code}")
-
-#         response.raise_for_status()
-#         return response
-    
-#     except Exception as e:
-#         print(f"Error: {e}")
-#         return None
-
-
 KAFKA_CLIENT = KafkaClient(hosts=f'{kafka_host}:{kafka_port}')
 KAFKA_TOPIC = KAFKA_CLIENT.topics[str.encode(kafka_topic)]
 KAFKA_PRODUCER = KAFKA_TOPIC.get_sync_producer()
+
+
+# Kafka producer retry wrapper class
+class KafkaWrapper:
+    def __init__(self, hostname, topic):
+        self.hostname = hostname
+        self.topic = topic
+        self.client = None
+        self.producer = None
+        self.connect()
+
+    def connect(self):
+        """Infinite loop: will keep trying"""
+        while True:
+            logger.debug("Trying to connect to Kafka...")
+            if self.make_client():
+                if self.make_producer():
+                    break
+            time.sleep(random.randint(500, 1500) / 1000)
+
+    def make_client(self):
+        """Creates a Kafka client"""
+        if self.client is not None:
+            return True
+        try:
+            self.client = KafkaClient(hosts=f"{self.hostname}:{kafka_port}")
+            logger.info("Kafka client created!")
+            return True
+        except KafkaException as e:
+            logger.warning(f"Kafka error when creating client: {e}")
+            self.client = None
+            return False
+
+    def make_producer(self):
+        """Creates a Kafka producer"""
+        if self.producer is not None:
+            return True
+        if self.client is None:
+            return False
+        try:
+            topic = self.client.topics[str.encode(self.topic)]
+            self.producer = topic.get_sync_producer()
+            logger.info(f"Kafka producer created for topic: {self.topic}")
+            return True
+        except KafkaException as e:
+            logger.warning(f"Kafka error when creating producer: {e}")
+            self.producer = None
+            return False
+
+    def send_message(self, message):
+        """Sends message to Kafka"""
+        if self.producer is None:
+            self.connect()
+        self.producer.produce(message.encode('utf-8'))
+        logger.info(f"Message sent to Kafka: {message}")
+
+# Initialize KafkaWrapper for producing messages
+kafka_wrapper = KafkaWrapper(f"{kafka_host}", kafka_topic)
+
+   
 
 
 def send_to_kafka(event_type, data):
@@ -73,7 +113,9 @@ def send_to_kafka(event_type, data):
 
         
         msg_str = json.dumps(msg)
-        KAFKA_PRODUCER.produce(msg_str.encode('utf-8'))  
+        # KAFKA_PRODUCER.produce(msg_str.encode('utf-8'))  
+        kafka_wrapper.send_message(msg_str)
+
 
         logger.info(f"Message for event {event_type} has been sent to Kafka.")
     
