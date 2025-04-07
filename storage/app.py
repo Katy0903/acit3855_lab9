@@ -13,10 +13,11 @@ import yaml
 import logging
 import logging.config
 from datetime import datetime as dt
-from pykafka import KafkaClient, KafkaException
+from pykafka import KafkaClient
 from pykafka.common import OffsetType
 from threading import Thread
 import random
+from pykafka.exceptions import KafkaException
 
 with open("./config/log_conf.yml", "r") as f:
     LOG_CONFIG = yaml.safe_load(f.read())

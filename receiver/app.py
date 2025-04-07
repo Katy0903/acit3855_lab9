@@ -8,9 +8,11 @@ import yaml
 import logging
 import logging.config
 import uuid
-from pykafka import KafkaClient, KafkaException
+from pykafka import KafkaClient
 import random
 import time
+from pykafka.exceptions import KafkaException
+
 
 # STORAGE_SERVICE_URL = "http://localhost:8090"
 
