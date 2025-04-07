@@ -42,6 +42,8 @@ kafka_url = f"{kafka_host}:{kafka_port}"
 client = KafkaClient(hosts=kafka_url)
 topic = client.topics[str.encode(kafka_topic)]
 
+
+
 def get_event(event_type, index):
 
     consumer = topic.get_simple_consumer(reset_offset_on_start=True, consumer_timeout_ms=1000)

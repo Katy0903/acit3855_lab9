@@ -52,23 +52,34 @@ kafka_port = kafka_config['port']
 kafka_topic = kafka_config['topic']
 
 
+KAFKA_CLIENT = KafkaClient(hosts=f"{kafka_host}:{kafka_port}")
+KAFKA_TOPIC = KAFKA_CLIENT.topics[str.encode(kafka_topic)]
+
 def process_messages():
     """Process event messages from Kafka"""
-    hostname = f"{kafka_host}:{kafka_port}"
-    topic_name = kafka_topic
-
-  
-    client = KafkaClient(hosts=hostname)
-    topic = client.topics[str.encode(topic_name)]
-
+    # hostname = f"{kafka_host}:{kafka_port}"
+    # topic_name = kafka_topic
+    # client = KafkaClient(hosts=hostname)
+    # topic = client.topics[str.encode(topic_name)]
     
-    consumer = topic.get_simple_consumer(
+    # consumer = topic.get_simple_consumer(
+    #     consumer_group=b'event_group',
+    #     reset_offset_on_start=False,  
+    #     auto_offset_reset=OffsetType.LATEST  
+    # )
+
+    # logger.info(f"Connected to Kafka at {hostname}, listening for messages on topic {topic_name}")
+
+
+    consumer = KAFKA_TOPIC.get_simple_consumer(
         consumer_group=b'event_group',
-        reset_offset_on_start=False,  
+        reset_offset_on_start=False, 
         auto_offset_reset=OffsetType.LATEST  
     )
+  
 
-    logger.info(f"Connected to Kafka at {hostname}, listening for messages on topic {topic_name}")
+    logger.info(f"Connected to Kafka, listening for messages on topic {kafka_topic}")
+
 
  
     for msg in consumer:

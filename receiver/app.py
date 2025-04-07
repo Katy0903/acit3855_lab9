@@ -50,16 +50,19 @@ kafka_topic = kafka_config['topic']
 #         return None
 
 
+KAFKA_CLIENT = KafkaClient(hosts=f'{kafka_host}:{kafka_port}')
+KAFKA_TOPIC = KAFKA_CLIENT.topics[str.encode(kafka_topic)]
+KAFKA_PRODUCER = KAFKA_TOPIC.get_sync_producer()
+
+
 def send_to_kafka(event_type, data):
     try:
+
+        # client = KafkaClient(hosts=f'{kafka_host}:{kafka_port}')
+        # topic = client.topics[str.encode(kafka_topic)]
+        # producer = topic.get_sync_producer()
+        
         logger.info(f"Received event {event_type} with a trace id of {data.get('trace_id')}")
-
-      
-        client = KafkaClient(hosts=f'{kafka_host}:{kafka_port}')
-        topic = client.topics[str.encode(kafka_topic)]
-        producer = topic.get_sync_producer()
-
-     
         data["trace_id"] = str(uuid.uuid4())
 
         msg = {
@@ -70,7 +73,7 @@ def send_to_kafka(event_type, data):
 
         
         msg_str = json.dumps(msg)
-        producer.produce(msg_str.encode('utf-8'))  
+        KAFKA_PRODUCER.produce(msg_str.encode('utf-8'))  
 
         logger.info(f"Message for event {event_type} has been sent to Kafka.")
     
