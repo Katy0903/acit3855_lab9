@@ -13,11 +13,10 @@ import yaml
 import logging
 import logging.config
 from datetime import datetime as dt
-from pykafka import KafkaClient
+from pykafka import KafkaClient, KafkaException
 from pykafka.common import OffsetType
 from threading import Thread
 import random
-from pykafka.exceptions import KafkaException
 
 with open("./config/log_conf.yml", "r") as f:
     LOG_CONFIG = yaml.safe_load(f.read())
@@ -57,72 +56,6 @@ KAFKA_CLIENT = KafkaClient(hosts=f"{kafka_host}:{kafka_port}")
 KAFKA_TOPIC = KAFKA_CLIENT.topics[str.encode(kafka_topic)]
 
 
-class KafkaWrapper:
-    def __init__(self, hostname, topic):
-        self.hostname = hostname
-        self.topic = topic
-        self.client = None
-        self.consumer = None
-        self.connect()
-
-    def connect(self):
-        """Infinite loop: will keep trying"""
-        while True:
-            logger.debug("Trying to connect to Kafka...")
-            if self.make_client():
-                if self.make_consumer():
-                    break
-            time.sleep(random.randint(500, 1500) / 1000)
-
-    def make_client(self):
-        """Creates a Kafka client"""
-        if self.client is not None:
-            return True
-        try:
-            self.client = KafkaClient(hosts=f"{self.hostname}:{kafka_port}")
-            logger.info("Kafka client created!")
-            return True
-        except KafkaException as e:
-            logger.warning(f"Kafka error when creating client: {e}")
-            self.client = None
-            return False
-
-    def make_consumer(self):
-        """Creates a Kafka consumer"""
-        if self.consumer is not None:
-            return True
-        if self.client is None:
-            return False
-        try:
-            topic = self.client.topics[str.encode(self.topic)]
-            self.consumer = topic.get_simple_consumer(
-                reset_offset_on_start=False,
-                auto_offset_reset=OffsetType.LATEST
-            )
-            logger.info(f"Kafka consumer created for topic: {self.topic}")
-            return True
-        except KafkaException as e:
-            logger.warning(f"Kafka error when creating consumer: {e}")
-            self.consumer = None
-            return False
-
-    def messages(self):
-        """Fetch messages from Kafka"""
-        if self.consumer is None:
-            self.connect()
-        while True:
-            try:
-                for msg in self.consumer:
-                    yield msg
-            except KafkaException as e:
-                logger.warning(f"Kafka issue in consumer: {e}")
-                self.client = None
-                self.consumer = None
-                self.connect()
-
-# Initialize KafkaWrapper for consuming messages
-kafka_wrapper = KafkaWrapper(f"{kafka_host}", kafka_topic)
-
 
 def process_messages():
     """Process event messages from Kafka"""
@@ -140,17 +73,18 @@ def process_messages():
     # logger.info(f"Connected to Kafka at {hostname}, listening for messages on topic {topic_name}")
 
 
-    # consumer = KAFKA_TOPIC.get_simple_consumer(
-    #     consumer_group=b'event_group',
-    #     reset_offset_on_start=False, 
-    #     auto_offset_reset=OffsetType.LATEST  
-    # )
+    consumer = KAFKA_TOPIC.get_simple_consumer(
+        consumer_group=b'event_group',
+        reset_offset_on_start=False, 
+        auto_offset_reset=OffsetType.LATEST  
+    )
   
+
     logger.info(f"Connected to Kafka, listening for messages on topic {kafka_topic}")
 
 
  
-    for msg in kafka_wrapper.messages():
+    for msg in consumer:
         msg_str = msg.value.decode('utf-8')  
         msg = json.loads(msg_str)  
 
@@ -167,7 +101,7 @@ def process_messages():
         else:
             logger.warning(f"Unknown event type: {event_type}")
 
-        kafka_wrapper.consumer.commit_offsets()
+        consumer.commit_offsets()
 
 
 def setup_kafka_thread():
