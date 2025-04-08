@@ -11,7 +11,7 @@ import uuid
 from pykafka import KafkaClient
 from tenacity import retry, stop_after_attempt, wait_fixed, retry_if_exception_type
 import time
-
+from pykafka.exceptions import KafkaException
 
 # STORAGE_SERVICE_URL = "http://localhost:8090"
 

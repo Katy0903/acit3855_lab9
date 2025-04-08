@@ -13,11 +13,14 @@ import yaml
 import logging
 import logging.config
 from datetime import datetime as dt
-from pykafka import KafkaClient, KafkaException
+from pykafka import KafkaClient
 from pykafka.common import OffsetType
 from threading import Thread
 import random
 from tenacity import retry, stop_after_attempt, wait_fixed, retry_if_exception_type
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
+from pykafka.exceptions import KafkaException
 
 with open("./config/log_conf.yml", "r") as f:
     LOG_CONFIG = yaml.safe_load(f.read())
@@ -33,7 +36,6 @@ MAX_EVENTS = 5
 EVENT_FILE = "events.json"  
 
 
-create_tables()
 
 # def use_db_session(func):
 #     @functools.wraps(func)
@@ -51,6 +53,33 @@ kafka_config = app_config['events']
 kafka_host = kafka_config['hostname']
 kafka_port = kafka_config['port']
 kafka_topic = kafka_config['topic']
+
+db_user=app_config['datastore']['user']
+db_password=app_config['datastore']['password']
+db_hostname=app_config['datastore']['hostname']
+db_port=app_config['datastore']['port']
+db_name=app_config['datastore']['db']
+
+DB_URL = f"mysql://{db_user}:{db_password}@{db_hostname}:{db_port}/{db_name}"
+
+engine = create_engine(
+    DB_URL,
+    pool_size=10,            # adjust based on load
+    pool_recycle=1800,       # recycle connections every 30 min
+    pool_pre_ping=True,      # test connections before using
+    echo=False               # set True for debugging
+)
+
+# Create session factory
+Session = sessionmaker(bind=engine)
+
+def make_session():
+    return Session()
+
+Base = declarative_base()
+
+create_tables()
+
 
 
 # KAFKA_CLIENT = KafkaClient(hosts=f"{kafka_host}:{kafka_port}")
